@@ -1,2 +1,5 @@
 # Testing
 pytest>=7.0.0
+
+# Linting (Jakość kodu)
+flake8>=6.0.0
