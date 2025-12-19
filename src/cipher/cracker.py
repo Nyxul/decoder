@@ -32,7 +32,7 @@ class CipherCracker:
             return char
         
         is_upper = char.isupper()
-        char_lower = char.islower()
+        char_lower = char.lower()
 
         idx = self.alphabet.index(char_lower)
 
