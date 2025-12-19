@@ -32,15 +32,16 @@ class TestCipherCracker:
 
 
     def test_decrypt(self, cracker):
-    
-
-        """Testuje odszyfrowanie całego zdania."""
 
 
-        encrypted_text = "bcdef"
+        """Testuje przesuwanie całego zdania."""
+
+
+
+        text = "abcde"
         shift = 1
-
-        assert cracker.decrypt(encrypted_text, shift) == "abcde"
+        
+        assert cracker.decrypt(text, shift) == "bcdef"
 
 
     def test_brute_force_decrypt(self, cracker):
