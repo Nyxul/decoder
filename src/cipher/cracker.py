@@ -24,9 +24,6 @@ class CipherCracker:
 
         Returns:
             str: Przesunięty znak.
-
-        Raises:
-            None
         -----------------------------------------------------------------------
         """
 
@@ -50,7 +47,8 @@ class CipherCracker:
 
         """
         ------------------------------------------------------------------------
-        Odszyfrowuje tekst przesunięciem o określoną liczbę miejsc w alfabecie.
+        Odszyfrowuje tekst poprzez przesunięcie o określoną liczbę miejsc w 
+        alfabecie.
 
         Args:
             text (str): Tekst do odszyfrowania.
@@ -58,7 +56,6 @@ class CipherCracker:
 
         Returns:
             str: Odszyfrowany tekst.        
-
         -----------------------------------------------------------------------
         """
 
@@ -77,8 +74,8 @@ class CipherCracker:
             text (str): Tekst do odszyfrowania. 
 
         Returns:
-            List[Tuple[int, str]]: Lista krotek zawierających przesunięcie i odpowiadający odszyfrowany tekst.
-
+            List[Tuple[int, str]]: Lista krotek zawierających przesunięcie 
+            i odpowiadający odszyfrowany tekst.
         -----------------------------------------------------------------------
         """
 
@@ -86,6 +83,7 @@ class CipherCracker:
         results = []
 
         for shift in range(1, self.alphabet_len):
+
             decrypted_text = self.decrypt(text, shift)
             results.append((shift, decrypted_text))
         
